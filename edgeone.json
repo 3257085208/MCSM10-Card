@@ -1,4 +1,10 @@
-# Nginx
-location / {
-add_header 'Access-Control-Allow-Origin' '*' always;
+{
+  "headers": [
+    {
+      "source": "/*",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
 }
